@@ -19,13 +19,16 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.drawscope.Stroke
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.rememberAsyncImagePainter
 import com.example.pashu_ahar.api.*
 import com.example.pashu_ahar.components.BottomNavigationBar
+import com.example.pashu_ahar.components.SimplePieChart
 import com.example.pashu_ahar.ui.theme.DarkGreen
 import kotlinx.coroutines.launch
 
@@ -153,10 +156,18 @@ fun DiseaseOverviewCard(distribution: Map<String, Int>) {
 fun DiseaseCaseItem(case: DiseaseCase) {
     Card(Modifier.fillMaxWidth(), shape = RoundedCornerShape(16.dp), colors = CardDefaults.cardColors(containerColor = Color.White), elevation = CardDefaults.cardElevation(1.dp)) {
         Row(Modifier.padding(16.dp), verticalAlignment = Alignment.CenterVertically) {
-            Image(painter = rememberAsyncImagePainter(case.cow.profileImage), contentDescription = null, modifier = Modifier.size(50.dp).clip(CircleShape), contentScale = androidx.compose.ui.layout.ContentScale.Crop)
+            val profileImage = case.cow?.profileImage
+            val cowName = case.cow?.name ?: "Unknown Cow"
+            
+            Image(
+                painter = if (profileImage != null) rememberAsyncImagePainter(profileImage) else painterResource(id = R.drawable.ic_cow), 
+                contentDescription = null, 
+                modifier = Modifier.size(50.dp).clip(CircleShape), 
+                contentScale = androidx.compose.ui.layout.ContentScale.Crop
+            )
             Spacer(Modifier.width(16.dp))
             Column(Modifier.weight(1f)) {
-                Text(case.cow.name, fontWeight = FontWeight.Bold)
+                Text(cowName, fontWeight = FontWeight.Bold)
                 Text(case.diseaseName, color = Color.Red, fontSize = 14.sp)
                 Text("Detected: ${case.detectedOn.take(10)}", fontSize = 11.sp, color = Color.Gray)
             }

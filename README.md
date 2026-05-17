@@ -13,6 +13,42 @@ Pashu-Aahar is a comprehensive dairy management platform designed to empower far
 
 ---
 
+## 📸 Screenshots
+
+### App UI
+<p align="center">
+  <img src="screenshots/cows.png" width="30%" />
+  <img src="screenshots/diseasetracking.png" width="30%" />
+  <img src="screenshots/costtracker.png" width="30%" />
+</p>
+<p align="center">
+  <img src="screenshots/disease.png" width="30%" />
+  <img src="screenshots/tips.png" width="30%" />
+</p>
+
+### API Documentation (Postman)
+#### Authentication
+- **Signup**: `screenshots/Signup.png`
+- **Login**: `screenshots/Login.png`
+- **Update Profile**: `screenshots/update.png`
+
+#### Cow Management
+- **Add a New Cow**: `screenshots/addnewcow.png`
+- **Get All Cows**: `screenshots/getallcows.png`
+
+#### Cost & Health
+- **Add Transaction**: `screenshots/expensesdb.png`
+- **Financial Summary**: `screenshots/financialsummury.png`
+- **Disease Dashboard**: `screenshots/diseasedashboard.png`
+
+### Database (MongoDB)
+<p align="center">
+  <img src="screenshots/usersdb.png" width="45%" />
+  <img src="screenshots/diseasedb.png" width="45%" />
+</p>
+
+---
+
 ## 🛠️ Prerequisites
 
 Before you begin, ensure you have the following installed:
@@ -72,52 +108,6 @@ cd Pashu_Ahar
 
 1. Ensure the Node.js backend is running.
 2. In Android Studio, select your device/emulator and click the **Run** button (green play icon).
-
----
-
-## 🧪 API Documentation
-
-The backend exposes several endpoints:
-- `POST /api/auth/signup`: User registration with image upload.
-- `POST /api/auth/login`: User authentication.
-- `GET /api/cows`: Fetch all cows for the user.
-- `GET /api/costs/summary`: Financial overview and transactions.
-- `GET /api/diseases/summary`: Health stats and active cases.
-
----
-
-## 📸 API Screenshots (Postman)
-
-### 1. Authentication
-#### Signup
-![Signup API](screenshots/signup_api.png)
-
-#### Login
-![Login API](screenshots/login_api.png)
-
-#### Update Profile
-![Update Profile API](screenshots/update_profile_api.png)
-
-### 2. Cow Management
-#### Add a New Cow
-![Add Cow API](screenshots/add_cow_api.png)
-
-#### Get All Cows
-![Get All Cows API](screenshots/get_cows_api.png)
-
-### 3. Cost Tracker
-#### Add Transaction
-![Add Transaction API](screenshots/add_transaction_api.png)
-
-#### Financial Summary
-![Financial Summary API](screenshots/financial_summary_api.png)
-
-### 4. Disease Tracking
-#### Add Disease Case
-![Add Disease Case API](screenshots/add_disease_case_api.png)
-
-#### Disease Dashboard
-![Disease Dashboard API](screenshots/disease_dashboard_api.png)
 
 ---
 

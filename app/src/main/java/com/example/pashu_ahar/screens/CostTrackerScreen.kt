@@ -27,6 +27,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.pashu_ahar.api.*
 import com.example.pashu_ahar.components.BottomNavigationBar
+import com.example.pashu_ahar.components.SimplePieChart
 import com.example.pashu_ahar.ui.theme.DarkGreen
 import kotlinx.coroutines.launch
 
@@ -204,26 +205,6 @@ fun ExpenseOverviewCard(categoryTotals: Map<String, Float>, total: Float) {
                     }
                 }
             }
-        }
-    }
-}
-
-@Composable
-fun SimplePieChart(data: Map<String, Float>, total: Float) {
-    val colors = listOf(Color(0xFF4CAF50), Color(0xFF2196F3), Color(0xFFFF9800), Color(0xFFE91E63), Color(0xFF9C27B0))
-    Canvas(modifier = Modifier.fillMaxSize()) {
-        var startAngle = -90f
-        data.values.forEachIndexed { index, value ->
-            val sweepAngle = (value / total) * 360f
-            drawArc(
-                color = colors[index % colors.size],
-                startAngle = startAngle,
-                sweepAngle = sweepAngle,
-                useCenter = false,
-                style = Stroke(width = 25f),
-                size = Size(size.width, size.height)
-            )
-            startAngle += sweepAngle
         }
     }
 }
