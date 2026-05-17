@@ -86,5 +86,40 @@ The backend exposes several endpoints:
 
 ---
 
+## 📸 API Screenshots (Postman)
+
+### 1. Authentication
+#### Signup
+![Signup API](screenshots/signup_api.png)
+
+#### Login
+![Login API](screenshots/login_api.png)
+
+#### Update Profile
+![Update Profile API](screenshots/update_profile_api.png)
+
+### 2. Cow Management
+#### Add a New Cow
+![Add Cow API](screenshots/add_cow_api.png)
+
+#### Get All Cows
+![Get All Cows API](screenshots/get_cows_api.png)
+
+### 3. Cost Tracker
+#### Add Transaction
+![Add Transaction API](screenshots/add_transaction_api.png)
+
+#### Financial Summary
+![Financial Summary API](screenshots/financial_summary_api.png)
+
+### 4. Disease Tracking
+#### Add Disease Case
+![Add Disease Case API](screenshots/add_disease_case_api.png)
+
+#### Disease Dashboard
+![Disease Dashboard API](screenshots/disease_dashboard_api.png)
+
+---
+
 ## 📝 License
 This project is for educational and management purposes for dairy farmers.
